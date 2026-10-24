@@ -191,3 +191,56 @@ audio { width: 100%; margin: 6px 0 12px 0; }
   margin: 2px 0 4px 0;
 }
 
+/* --- formats: leaderboard, skyscraper, box, buttons, text --- */
+.ad img, .ad-lb img, .ad-box img { object-fit: cover; }
+
+/* 728x90 leaderboard, sat above the masthead the way they were sold */
+.ad-lb-host { padding: 6px 14px 4px 14px; background: #f7f7ef; border-bottom: 1px solid #bbb; text-align: center; }
+.ad-lb { display: inline-block; width: 726px; max-width: 100%; text-align: left; }
+.ad-lb-link { display: block; border: 1px solid #999; background: #ececdf; padding: 4px; overflow: hidden; }
+.ad-lb img { float: left; width: 90px; height: 90px; border: 1px solid #bbb; margin-right: 10px; }
+.ad-lb-text { padding: 4px 6px 0 0; }
+.ad-lb-brand { font-family: Verdana, Arial, sans-serif; font-size: 10px; letter-spacing: 1px; color: #7a5c00; text-transform: uppercase; }
+.ad-lb-head { font-size: 20px; font-weight: bold; color: #1d3a5c; line-height: 1.2; }
+.ad-lb-body { font-size: 12px; color: #333; }
+.ad-lb-noimg img { display: none; }
+
+/* 120x600 skyscraper */
+.ad-sky-host { width: 120px; }
+.ad-sky { display: block; width: 118px; height: 600px; border: 1px solid #999; background: #f2f0e2; text-decoration: none; overflow: hidden; }
+.ad-sky-brand { font-family: Verdana, Arial, sans-serif; font-size: 9px; letter-spacing: 1px; color: #fff; background: #1d3a5c; padding: 4px 3px; text-align: center; text-transform: uppercase; }
+.ad-sky img { display: block; width: 106px; height: 106px; margin: 6px auto 0 auto; border: 1px solid #bbb; }
+.ad-sky-head { font-size: 15px; font-weight: bold; color: #1d3a5c; text-align: center; padding: 8px 6px 0 6px; line-height: 1.2; }
+.ad-sky-body { font-size: 11px; color: #444; text-align: center; padding: 6px 6px 0 6px; line-height: 1.35; }
+.ad-sky-cta { margin: 10px 8px 0 8px; border: 1px solid #1d3a5c; background: #e8e4c8; color: #1d3a5c; font-family: Verdana, Arial, sans-serif; font-size: 10px; text-align: center; padding: 3px 0; text-transform: uppercase; }
+.ad-sky-rule { border-top: 1px solid #c9bf8e; margin: 12px 10px 0 10px; }
+.ad-sky-noimg img { display: none; }
+
+/* 300x250 box */
+.ad-box-host { margin: 10px 0; }
+.ad-box { width: 300px; }
+.ad-box-link { display: block; width: 298px; border: 1px solid #999; background: #f2f0e2; text-decoration: none; overflow: hidden; }
+.ad-box img { display: block; width: 296px; height: 149px; border-bottom: 1px solid #ddd; }
+.ad-box-brand { font-family: Verdana, Arial, sans-serif; font-size: 9px; letter-spacing: 1px; color: #7a5c00; text-transform: uppercase; padding: 4px 6px 0 6px; }
+.ad-box-head { font-size: 17px; font-weight: bold; color: #1d3a5c; padding: 1px 6px 0 6px; line-height: 1.2; }
+.ad-box-body { font-size: 12px; color: #444; padding: 3px 6px 0 6px; }
+.ad-box-cta { margin: 6px 6px 6px 6px; border: 1px solid #1d3a5c; background: #e8e4c8; color: #1d3a5c; font-family: Verdana, Arial, sans-serif; font-size: 10px; text-align: center; padding: 2px 0; text-transform: uppercase; }
+.ad-box-noimg img { display: none; }
+.ad-box-noimg .ad-box-link { min-height: 200px; }
+
+/* 88x31 buttons */
+.ad-btns { padding: 8px 14px; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; background: #f7f7ef; }
+.ad-btn { display: inline-block; width: 88px; height: 31px; line-height: 31px; margin: 0 4px 4px 0; border: 1px solid #555; background: #dfe3e8; color: #10233d; font-family: Verdana, Arial, sans-serif; font-size: 8px; text-align: center; text-decoration: none; letter-spacing: 0.5px; overflow: hidden; }
+.ad-btn:hover { background: #cfd6de; }
+
+/* text ads */
+.ad-text { padding: 8px 12px; border-top: 1px solid #ccc; font-size: 12px; background: #fbfbf3; }
+.ad-text-line { margin-bottom: 3px; color: #555; }
+
+/* right-hand rail: the classic 2003 skyscraper */
+.page.has-rail { width: 900px; }
+.has-rail .content { margin-right: 148px; }
+.rail { float: right; width: 132px; margin: 12px 8px 0 0; }
+.rail .ad-label { text-align: center; }
+
+
