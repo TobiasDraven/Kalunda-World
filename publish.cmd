@@ -13,7 +13,7 @@ if not exist "%SRC%" (echo Source folder not found: %SRC% & exit /b 1)
 if not exist "%DST%" (echo Mirror not found. Clone it first: & exit /b 1)
 
 echo Mirroring vault source to %DST% ...
-robocopy "%SRC%" "%DST%" /MIR /XD .git /XF *.bak /NFL /NDL /NJH /NJS /NP
+robocopy "%SRC%" "%DST%" /MIR /XD .git _SOURCE /XF *.bak /NFL /NDL /NJH /NJS /NP
 if %ERRORLEVEL% GEQ 8 (echo Robocopy failed with %ERRORLEVEL% & exit /b %ERRORLEVEL%)
 
 cd /d "%DST%"

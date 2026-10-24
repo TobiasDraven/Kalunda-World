@@ -28,3 +28,9 @@ Once an archived movement page exists, `ads.js` has a commented example for a `t
 - Rows default to 2; three creatives per row at the portal's 760 px width.
 - Selection is **stable per page** (seeded from the path), so a student comparing screens with a neighbour sees the same portal. Add `data-rotate="true"` to the container if you want it to reshuffle on each load instead.
 - A missing plate degrades to a bordered box carrying the caption — never a broken-image icon, and the ad still reads as an ad.
+
+## Masters and legibility
+- Keep the full-resolution master in `_SOURCE/` (excluded from `publish.cmd`, so it never reaches the repo). `ministry-health-master-1536.png` is the first one.
+- At 210 × 176 only the **headline** survives as readable text; anything smaller becomes texture. That is period-correct — a small ad in 2003 carried one legible line — so write each creative for its headline and let the caption below the plate carry the rest.
+- Verified by offline OCR: the `ministry-health.png` plate reads "BOIL WATER" at full size, and the source master reads the full instructional panel correctly.
+
