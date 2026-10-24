@@ -14,7 +14,6 @@ The portal carries banner advertising, because a national portal without it look
 | `luvasi-bottling.png` | Luvasi Bottling — the water of the valley | A bottle or a water tanker, valley backdrop | tourism |
 | `kalunda-mobile.png` | Kalunda Mobile — now in nine wards | A handset, a mast, or a coverage-map graphic with an obviously optimistic shaded area | geography |
 | `ministry-health.png` | Ministry of Health — boil water before drinking | A poster-style plate, serious and slightly crude | government notice |
-| `sere-copper.png` | Sere Copper — we are hiring | Mine headgear, a truck, a worker in silhouette | country |
 | `ministry-information.png` | Report rumours to your ward office | A notice-board or a radio mast, institutional colours | government notice |
 | `kalunda-fa.png` | Kalunda Football Association — league fixtures | A ball, a stadium hoarding, a team photograph | news |
 | `mbuyane-traders.png` | Mbuyane Traders' Association — open daily | Market stalls, produce, cloth | tourism |

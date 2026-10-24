@@ -33,13 +33,6 @@
       img: "kalunda-mobile.png", href: "geography/index.html",
       formats: ["skyscraper", "leaderboard", "box", "banner"] },
 
-    { id: "sere-copper", advertiser: "SERE COPPER",
-      headline: "We are hiring",
-      body: "Drillers, fitters and haul drivers. Housing provided at the Sands.",
-      cta: "Apply at the gate",
-      img: "sere-copper.png", href: "country.html",
-      formats: ["box", "skyscraper", "banner"] },
-
     { id: "kalunda-rail", advertiser: "KALUNDA RAIL",
       headline: "Nsundu to Kembe",
       body: "Freight and second class. Departs Tuesdays and Fridays.",
