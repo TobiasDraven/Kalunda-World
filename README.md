@@ -42,5 +42,16 @@ Site lands at `https://<your-github-user>.github.io/kalunda-portal/`.
 - **Keep it dated.** Every page footer carries a date consistent with the scenario clock (authorisation 13 January, scenario opens 14 January).
 - **Text in images is composited**, not generated — see the `text2img-prompting` skill.
 
+## Advertising — `assets/js/ads.js`
+A portal with no advertising reads as staged, so the front page carries banner ads: 210 × 176 creatives for in-world businesses and ministries, with "Advertisement" labels and an "Advertise on this portal" line, exactly as a 2003 ministry portal would.
+
+- **Include it:** `<script src="assets/js/ads.js"></script>` (or `../assets/js/ads.js` from a subfolder). Paths resolve from the script's own location, so one tag works at any depth.
+- **Placement:** by default the ad block is inserted directly below the nav. For explicit placement, put `<div id="kalunda-ads" data-num-rows="2"></div>` where you want it.
+- **Selection:** stable per page (seeded from the path) so two students looking at the same page see the same portal. `data-rotate="true"` reshuffles on each load instead.
+- **Missing plates degrade gracefully** to a bordered box carrying the caption — never a broken-image icon, and it still reads as an ad.
+- **The rogue slot:** `ads.js` carries a commented example for a "Statement from the Tsero National Movement (mirror, hosted abroad)" creative. The rotation is the right hiding place for rebel material — interior pages only, never the front page, never the nav, caption phrased as a period ad would phrase it.
+
+Creative briefs and filenames: `assets/img/ads/README.md`. Do not use a real brand, a real website or a third-party script — every click-through must stay inside the fiction.
+
 ## Placeholders
 `assets/img/` and `assets/audio/` are empty on purpose. Add files there and point the pages at them; the HTML already has the slots marked.

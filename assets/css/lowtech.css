@@ -139,3 +139,55 @@ th { background: #ececdf; }
 .schedule th { background: #ececdf; }
 audio { width: 100%; margin: 6px 0 12px 0; }
 .onair { color: #cc0000; font-family: Verdana, Arial, sans-serif; font-size: 12px; letter-spacing: 1px; }
+
+/* Banner advertising — period-accurate and deliberately cheap */
+.ads {
+  padding: 8px 10px 4px 10px;
+  border-bottom: 1px solid #bbb;
+  background: #f7f7ef;
+  text-align: center;
+}
+.ad {
+  display: inline-block;
+  width: 210px;
+  margin: 0 5px 6px 5px;
+  vertical-align: top;
+  text-align: left;
+}
+.ad img {
+  display: block;
+  width: 210px;
+  height: 176px;
+  border: 1px solid #999;
+  background: #ddd;
+}
+.ad-cap { display: none; }
+.ad-noimg img { display: none; }
+.ad-noimg .ad-cap {
+  display: block;
+  width: 210px;
+  height: 176px;
+  border: 1px solid #999;
+  background: #e9e9dc;
+  color: #333;
+  font-size: 13px;
+  padding: 12px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.ad-noimg .ad-cap { line-height: 1.3; }
+.ad-label {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #777;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+.ads-note {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+  color: #666;
+  margin: 2px 0 4px 0;
+}
+
