@@ -25,13 +25,13 @@ if not exist "%DST%" echo Mirror not found - clone it first: %DST% & goto :fail
 
 if /i "%MODE%"=="purge" goto :purge
 echo Copying new and changed files only - nothing will be deleted ...
-robocopy "%SRC%" "%DST%" /E /XD .git /XF *.bak /NFL /NDL /NJH /NJS /NP
+robocopy "%SRC%" "%DST%" /E /XD .git _SOURCE /XF *.bak /NFL /NDL /NJH /NJS /NP
 goto :after
 
 :purge
 if not exist "%SRC%\.github\workflows\pages.yml" goto :noguard
 echo MIRRORING - this deletes repo files absent from the vault ...
-robocopy "%SRC%" "%DST%" /MIR /XD .git /XF *.bak /NFL /NDL /NJH /NJS /NP
+robocopy "%SRC%" "%DST%" /MIR /XD .git _SOURCE /XF *.bak /NFL /NDL /NJH /NJS /NP
 goto :after
 
 :noguard
