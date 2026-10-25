@@ -68,6 +68,16 @@
       img: "mbuyane-traders.png", href: "tourism/index.html",
       formats: ["banner", "box"] },
 
+    /* ROGUE SLOT. Appears only on interior pages — never the front page, never the nav.
+       A mirrored statement is the sort of thing a 2003 rotation would carry without comment:
+       an advertiser is an advertiser. See the ROGUE SLOT note below for the rules. */
+    { id: "tsero-mirror", advertiser: "TSERO NATIONAL MOVEMENT", rogue: true,
+      headline: "Statement",
+      body: "The movement's account of the lease, the wards and the graves. Mirrored abroad.",
+      cta: "Read the statement",
+      img: "tsero-mirror.png", href: "archive/mirror.html",
+      formats: ["banner", "box"] },
+
     { id: "tourism-board", advertiser: "KALUNDA TOURISM BOARD",
       headline: "Visit the valley",
       body: "River trips, escarpment walks and market days in the nine wards.",
@@ -78,6 +88,7 @@
 
   /* Text ads — the AdSense-shaped line of 2003. */
   var TEXT_ADS = [
+    { text: "Statement from the Tsero National Movement (mirror, hosted abroad).", href: "archive/mirror.html", rogue: true },
     { text: "Kalunda Mobile \u2014 prepaid cards in every ward.", href: "geography/index.html" },
     { text: "Luvasi Bottling \u2014 bottled at Kembe, delivered in Lukunda.", href: "tourism/index.html" },
     { text: "Kalunda Rail \u2014 freight and second class, Tuesdays and Fridays.", href: "geography/index.html" },
@@ -93,16 +104,24 @@
     { label: "BEST VIEWED 800x600", href: "index.html" }
   ];
 
-  /* ROGUE SLOT — the point of the whole mechanism.
+  /* ROGUE SLOT — the point of the whole mechanism. FILLED 2026-10-25.
    *
-   * Once an archived movement page exists (say archive/tsero-statement.html), add
-   * to BUTTONS or TEXT_ADS an entry such as:
+   * The archived movement page is `archive/mirror.html` (note: NOT the
+   * `archive/tsero-statement.html` this comment used to name — that file was never
+   * built, and uncommenting the old example would have created a dead link).
    *
-   *   { label: "TSERO \u2014 MIRROR", href: "archive/tsero-statement.html" }
-   *   { text: "Statement from the Tsero National Movement (mirror, hosted abroad).", href: "archive/tsero-statement.html" }
+   * It is now carried two ways, both guarded:
+   *   - a CREATIVE above with `id: "tsero-mirror"` and `rogue: true`, banner and box;
+   *   - a TEXT_ADS entry with the same flag.
+   * `rogueAllowed()` excludes anything flagged rogue when <html> carries
+   * data-ad-rogue="off", which the front page does. Interior pages carry no such
+   * attribute, so the creative may appear there.
    *
-   * Rules: interior pages only, never the front page, never the nav, and phrased
-   * the way a period ad rotation would phrase it. A button in a strip of buttons
+   * It is also reachable from the references list of wiki/the-tsero-national-movement.html
+   * and from links.html. It is in no nav and on no front page.
+   *
+   * Rules if you extend this: interior pages only, never the front page, never the nav,
+   * phrased the way a period ad rotation would phrase it. A button in a strip of buttons
    * is the least inspected link on any page ever built.
    */
 
@@ -168,8 +187,21 @@
     return note;
   }
 
+  /* A creative marked rogue appears on interior pages only. The front page opts out
+     with data-ad-rogue="off" on <html>, which is explicit rather than inferred from the
+     path — path inference breaks under a GitHub Pages subdirectory, where the site root
+     is /<repo>/ and every page looks one level deep. */
+  function rogueAllowed() {
+    return document.documentElement.getAttribute("data-ad-rogue") !== "off";
+  }
+
   function pool(key) {
-    return CREATIVES.filter(function (c) { return c.formats.indexOf(key) > -1; });
+    var allowRogue = rogueAllowed();
+    return CREATIVES.filter(function (c) {
+      if (c.formats.indexOf(key) < 0) return false;
+      if (c.rogue && !allowRogue) return false;
+      return true;
+    });
   }
 
   /* ---------- banner: 210x176 grid ---------- */
