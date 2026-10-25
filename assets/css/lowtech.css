@@ -245,6 +245,9 @@ audio { width: 100%; margin: 6px 0 12px 0; }
 
 
 
-.content img { border: 1px solid #8a8a7a; margin: 2px 0 4px 0; }
+.content img { border: 1px solid #8a8a7a; margin: 2px 0 4px 0; max-width: 100%; height: auto; }
+.fig-full { width: 100%; height: auto; }
+.fig-right { float: right; width: 300px; height: auto; margin: 0 0 8px 14px; }
+.cap-right { float: right; clear: right; width: 300px; margin: 0 0 14px 14px; }
 .cap { margin: 4px 0 14px 0; font-size: 11px; color: #55554a; }
 .cap img { display: block; }

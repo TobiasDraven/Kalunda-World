@@ -9,6 +9,8 @@ The portal carries banner advertising, because a national portal without it look
 - Text inside the image: short placards and signs only. Captions are typeset in HTML by `ads.js`, so the caption text below is always readable even if the plate fails.
 
 ## The set (`assets/js/ads.js` references these filenames)
+Present: `kalunda-mobile`, `kalunda-rail`, `ministry-health`, `mbuyane-traders`. Deliberately absent: `luvasi-bottling` and `kalunda-fa` — both exist as rendered plates but are landscape banners that lose their lettering when cropped to 210 × 176, so the slot degrades to its caption box until square artwork arrives. `ministry-information`, `tourism-board` and `tsero-mirror` have never been rendered. See `90-ADMIN/MEDIA-REGISTER-2026-10-25.md` for what shipped, what was held and why.
+
 | File | Caption (as it appears) | Plate should show | Links to |
 | :-- | :-- | :-- | :-- |
 | `luvasi-bottling.png` | Luvasi Bottling — the water of the valley | A bottle or a water tanker, valley backdrop | tourism |
