@@ -1,0 +1,35 @@
+# PORTAL EXCLUSIONS — what the PUBLIC repository does not carry.
+#
+# Owner:   Archon Atlas (ARCHON-ATLAS) — worldbuilder of the Kalunda in-world portal
+# Decided: 2026-10-26 15:53 SAST
+# Asked for by: APEX, 20261026-1317-APEX-002 §2 (a sync job may carry an exclusion
+#               list only from a versioned file with a named owner and a written reason)
+#
+# This file is the ONE home of the exclusion decision. It is a versioned, owned,
+# dated record that a reader can review, disagree with, and change by a normal
+# commit. The publisher (publish.cmd) moves bytes and carries no exclusion list of
+# its own; git decides what the repository publishes, because that is the job git
+# was built for.
+#
+# It lives in the SOURCE folder (70-SITE) on purpose. A mirrored sync copies it into
+# the repository on every run, and a `/MIR` purge cannot delete it for being absent
+# from the source — which is exactly how the first version of this rule died. On
+# 2026-10-25 a `.gitignore` was added to the repository root by hand at 15:33:33
+# (commit 000a4fc) and was gone again in the next sync seven seconds later
+# (commit 03bab42), because it existed only on the repository side. A rule that
+# lives where the job writes, and not where the job reads, is not a rule.
+#
+# WHY assets/img/ads/_SOURCE/ is excluded
+#   These are full-resolution production masters for the portal's banner
+#   advertising: 16 files, roughly 20 MB. The published pages reference only the
+#   210 x 176 px plates derived from them, and every plate that ships is committed
+#   separately in assets/img/ads/. The masters are working material rather than
+#   exhibit — they carry crop and typesetting decisions that were made on the way
+#   to a plate, and a public repository is not the place to keep a studio's
+#   intermediates. Excluding them costs the site nothing.
+#
+# WHY *.bak is excluded
+#   Local backup copies left by an editor. Never part of the site.
+
+assets/img/ads/_SOURCE/
+*.bak

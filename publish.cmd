@@ -14,6 +14,15 @@ REM                                workflow the repo needs.
 REM
 REM Double-click works. Safe to run repeatedly; commits only when something changed.
 
+REM EXCLUSIONS ARE NOT DECIDED HERE.
+REM This script moves bytes. What the public repository carries is decided by the
+REM .gitignore in the source folder (70-SITE\.gitignore) - a versioned, owned, dated
+REM record - and by git, at `git add`. The previous form carried the exclusion as a
+REM /XD _SOURCE /XF *.bak flag inside the job, which made a content decision at the
+REM moment a timer happened to run it. Owner of that decision: Archon Atlas,
+REM 2026-10-26 (APEX 20261026-1317-APEX-002 section 2). Add or remove exclusions in
+REM 70-SITE\.gitignore, never in a robocopy flag below.
+
 set SRC=C:\OBSIDIAN-VAULT\ASTRALIS\ATELIER\EXDESIGN-CPX-INFSCHOOL-2026\70-SITE
 set DST=C:\KALUNDA-WORLD
 set MODE=copy
@@ -25,13 +34,13 @@ if not exist "%DST%" echo Mirror not found - clone it first: %DST% & goto :fail
 
 if /i "%MODE%"=="purge" goto :purge
 echo Copying new and changed files only - nothing will be deleted ...
-robocopy "%SRC%" "%DST%" /E /XD .git _SOURCE /XF *.bak /NFL /NDL /NJH /NJS /NP
+robocopy "%SRC%" "%DST%" /E /XD .git /NFL /NDL /NJH /NJS /NP
 goto :after
 
 :purge
 if not exist "%SRC%\.github\workflows\pages.yml" goto :noguard
 echo MIRRORING - this deletes repo files absent from the vault ...
-robocopy "%SRC%" "%DST%" /MIR /XD .git _SOURCE /XF *.bak /NFL /NDL /NJH /NJS /NP
+robocopy "%SRC%" "%DST%" /MIR /XD .git /NFL /NDL /NJH /NJS /NP
 goto :after
 
 :noguard
