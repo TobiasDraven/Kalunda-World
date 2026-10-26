@@ -274,3 +274,9 @@ h1.wiki-title { font-size: 22px; margin: 0 0 2px 0; border-bottom: 1px solid #8a
 .wikitable td { border: 1px solid #8a8a7a; padding: 3px 6px; vertical-align: top; }
 .editsection { font-size: 10px; color: #888; margin-left: 6px; font-weight: normal; }
 .stub { font-style: italic; font-size: 11px; color: #77776a; }
+
+/* neutrality notice */
+.povbox{border:1px solid #a33;background:#fdf3f3;padding:8px 10px;margin:12px 0;font-size:13px;line-height:1.45}
+.povbox strong{display:block;font-size:13px}
+.talkthread p{margin:10px 0;padding-left:12px;border-left:2px solid #ccc}
+.talkheader .hatnote{margin-top:0}
