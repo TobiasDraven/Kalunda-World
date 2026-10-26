@@ -251,3 +251,26 @@ audio { width: 100%; margin: 6px 0 12px 0; }
 .cap-right { float: right; clear: right; width: 300px; margin: 0 0 14px 14px; }
 .cap { margin: 4px 0 14px 0; font-size: 11px; color: #55554a; }
 .cap img { display: block; }
+
+/* ---- KalundaWiki furniture: encyclopedia article layout (added 2026-10-26) ---- */
+.hatnote { font-style: italic; font-size: 12px; padding: 2px 0 6px 0; margin-bottom: 8px; border-bottom: 1px solid #ccc; }
+h1.wiki-title { font-size: 22px; margin: 0 0 2px 0; border-bottom: 1px solid #8a8a7a; padding-bottom: 4px; }
+.wiki-subtitle { font-size: 11px; color: #55554a; margin: 0 0 10px 0; }
+.infobox { float: right; clear: right; width: 300px; margin: 0 0 12px 14px; border: 1px solid #8a8a7a; background: #f7f7ef; font-size: 12px; }
+.infobox-title { background: #dfe3e8; border-bottom: 1px solid #8a8a7a; padding: 4px 6px; font-weight: bold; text-align: center; }
+.infobox table { width: 100%; border-collapse: collapse; }
+.infobox th { text-align: left; vertical-align: top; padding: 3px 6px; width: 42%; background: #eceae0; border-top: 1px solid #d5d2c4; }
+.infobox td { vertical-align: top; padding: 3px 6px; border-top: 1px solid #d5d2c4; }
+.infobox-caption { font-size: 11px; color: #55554a; padding: 3px 6px; border-top: 1px solid #d5d2c4; text-align: center; }
+.infobox img { display: block; margin: 4px auto; max-width: 280px; height: auto; border: 1px solid #8a8a7a; }
+.imgph { border: 1px dashed #8a8a7a; background: #f2f2ea; color: #77776a; text-align: center; font-size: 11px; padding: 26px 8px; margin: 4px auto; max-width: 280px; }
+.toc { border: 1px solid #8a8a7a; background: #f7f7ef; padding: 6px 10px; margin: 10px 0 14px 0; font-size: 12px; display: inline-block; text-align: left; }
+.toc-title { font-weight: bold; text-align: center; margin-bottom: 4px; }
+.toc ol { margin: 0 0 0 18px; padding: 0; }
+.toc li { margin: 1px 0; }
+.catlinks { border: 1px solid #8a8a7a; background: #f7f7ef; padding: 4px 8px; margin: 16px 0 0 0; font-size: 11px; clear: both; }
+.wikitable { border-collapse: collapse; font-size: 12px; margin: 8px 0; }
+.wikitable th { background: #dfe3e8; border: 1px solid #8a8a7a; padding: 3px 6px; text-align: left; }
+.wikitable td { border: 1px solid #8a8a7a; padding: 3px 6px; vertical-align: top; }
+.editsection { font-size: 10px; color: #888; margin-left: 6px; font-weight: normal; }
+.stub { font-style: italic; font-size: 11px; color: #77776a; }
