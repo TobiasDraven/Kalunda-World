@@ -1,7 +1,8 @@
 /* Kalunda portal — banner advertising, 2003 style.
  *
- * An homage to Kaboodle (MIT, 2015): same idea, rewritten so the creatives are
- * ours and every click-through stays inside the fiction.
+ * The rotation mechanism and its design credits are recorded in the portal's
+ * own README, outside this file. The creatives are ours and every
+ * click-through stays inside the fiction.
  *
  * Self-contained: no network calls, no trackers, no dependencies.
  *
@@ -86,7 +87,7 @@
       formats: ["banner", "box", "leaderboard"] }
   ];
 
-  /* Text ads — the AdSense-shaped line of 2003. */
+  /* Text ads — the plain single-line unit of 2003. */
   var TEXT_ADS = [
     { text: "Statement from the Tsero National Movement (mirror, hosted abroad).", href: "archive/mirror.html", rogue: true },
     { text: "Kalunda Mobile \u2014 prepaid cards in every ward.", href: "geography/index.html" },
@@ -104,7 +105,7 @@
     { label: "BEST VIEWED 800x600", href: "index.html" }
   ];
 
-  /* ROGUE SLOT — the point of the whole mechanism. FILLED 2026-10-25.
+  /* ROGUE SLOT — the point of the whole mechanism. FILLED.
    *
    * The archived movement page is `archive/mirror.html` (note: NOT the
    * `archive/tsero-statement.html` this comment used to name — that file was never

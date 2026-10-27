@@ -252,7 +252,7 @@ audio { width: 100%; margin: 6px 0 12px 0; }
 .cap { margin: 4px 0 14px 0; font-size: 11px; color: #55554a; }
 .cap img { display: block; }
 
-/* ---- KalundaWiki furniture: encyclopedia article layout (added 2026-10-26) ---- */
+/* ---- KalundaWiki furniture: encyclopedia article layout ---- */
 .hatnote { font-style: italic; font-size: 12px; padding: 2px 0 6px 0; margin-bottom: 8px; border-bottom: 1px solid #ccc; }
 h1.wiki-title { font-size: 22px; margin: 0 0 2px 0; border-bottom: 1px solid #8a8a7a; padding-bottom: 4px; }
 .wiki-subtitle { font-size: 11px; color: #55554a; margin: 0 0 10px 0; }

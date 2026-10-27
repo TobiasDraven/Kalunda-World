@@ -53,5 +53,7 @@ A portal with no advertising reads as staged, so the front page carries banner a
 
 Creative briefs and filenames: `assets/img/ads/README.md`. Do not use a real brand, a real website or a third-party script — every click-through must stay inside the fiction.
 
+**Design credits (kept out of the served files on purpose).** The banner rotation and the rogue-slot mechanism in `assets/js/ads.js` are an homage to Kaboodle (MIT, 2015) — the same idea, rewritten so the creatives are ours and every click-through stays inside the fiction. Nothing in `70-SITE/` names a real product, a real institution or a real-world date: the fiction is dated 14 January 2026 and every served comment holds to that. This file is repository documentation, is not served to a reader, and is the one place the credit is recorded.
+
 ## Placeholders
 `assets/img/` and `assets/audio/` are empty on purpose. Add files there and point the pages at them; the HTML already has the slots marked.
