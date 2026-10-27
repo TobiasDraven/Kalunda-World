@@ -97,5 +97,21 @@ Best viewed at 800 × 600 &nbsp;·&nbsp; Visitors this month: 000 412 <span clas
 <em>Some sections remain under construction while the national network is extended.</em>
 </div>
 </div>
+<script>
+/* Only one recording plays at a time: starting one stops the rest. */
+(function () {
+  var players = document.querySelectorAll('audio');
+  for (var i = 0; i < players.length; i++) {
+    players[i].addEventListener('play', function () {
+      for (var j = 0; j < players.length; j++) {
+        if (players[j] !== this && !players[j].paused) {
+          players[j].pause();
+          players[j].currentTime = 0;
+        }
+      }
+    });
+  }
+})();
+</script>
 </body>
 </html>
